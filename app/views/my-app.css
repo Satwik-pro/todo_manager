@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  max-width: 600;
+  margin: 0px auto;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.TodoPage-title {
+  font-size: 48px;
+  line-height: 1.6;
+}
+
+.TodoSection-title {
+  font-size: 34px;
+  line-height: 1.4;
+}
+
+.TodoSection-todo {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-left: 32px;
+}
+
+.TodoSection {
+  margin-bottom: 32px;
+  margin-left: 32px;
+  padding: 32px;
+}
