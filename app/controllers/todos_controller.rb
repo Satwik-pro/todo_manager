@@ -20,8 +20,9 @@ class TodosController < ApplicationController
       due_date: due_date,
       completed: false,
     )
-    response_text = "New Todo created with ID: #{new_todo.id}"
-    render plain: response_text
+    # response_text = "New Todo created with ID: #{new_todo.id}"
+    # render plain: response_text
+    redirect_to todos_path
   end
 
   def update

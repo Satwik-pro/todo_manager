@@ -13,11 +13,13 @@
 
   <body>
     <h1>My Todo-list</h1>
-    <input type="text" placeholder="What's Next?" />
-    &nbsp;
-    <input type="date" />
-    &nbsp;
-    <button type="submit" style="cursor: pointer; font-size: 15px">Add</button>
+    <form action="/todos" method="POST">
+      <input type="text" placeholder="What's Next?" name="todo_text" />
+      &nbsp;
+      <input type="date" name="due_date"/>
+      &nbsp;
+      <button type="submit" style="cursor: pointer; font-size: 15px" name="add">Add</button>
+  </form>
       <%= render partial: "todo-section", locals: {
         section_title: "Overdue",
         todos: Todo.overdue,
