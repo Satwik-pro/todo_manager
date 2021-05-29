@@ -63,3 +63,7 @@ p {
 .TextSpan:hover {
   background-color: rgb(238, 222, 252);
 }
+
+.checked {
+  text-decoration: line-through;
+}

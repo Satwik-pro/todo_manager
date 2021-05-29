@@ -7,13 +7,10 @@
   <% else %>
   <p>
     <span class="TextSpan">
-      <% if todo.completed %>
-      <input class="Checkbox" type="checkbox" checked/>
-      <span class="Todos" style="text-decoration: line-through;"><%= todo.todo_text %>
-      <% else %>
-      <input class="Checkbox" type="checkbox" />
-      <span class="Todos"><%= todo.todo_text %>
-      <% end %>
+      <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+        <input class="Checkbox" name="completed" onClick="this.form.submit()" type="checkbox" <%= todo.completed ? "checked" : "" %>>
+      <span class='Todos <%= todo.completed ? "checked" : "" %>'>
+        <%= todo.todo_text %>
         <% if show_date %>
         <span style="color: grey"><%= todo.due_date %></span>
         <% end %>
@@ -21,6 +18,7 @@
           onMouseOver="this.style.color='black', this.style.cursor='pointer'" onMouseOut="this.style.color='white'">
         </i>
       </span>
+      <% end %>
     </span>
   </p>
   <% end %>
