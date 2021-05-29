@@ -1,0 +1,26 @@
+<section>
+  <h2><%= section_title %><span><%= todos.completed.count %>/<%= todos.count %></span></h2>
+  <% todos.order(:due_date).each do |todo| %>
+  <% if section_title == "Overdue" && todo.completed %>
+  <% else %>
+  <p>
+    <span class="TextSpan">
+      <% if todo.completed %>
+      <input class="Checkbox" type="checkbox" checked/>
+      <span class="Todos" style="text-decoration: line-through;"><%= todo.todo_text %>
+      <% else %>
+      <input class="Checkbox" type="checkbox" />
+      <span class="Todos"><%= todo.todo_text %>
+      <% end %>
+        <% if show_date %>
+        <span style="color: grey"><%= todo.due_date %></span>
+        <% end %>
+        <i class="fa fa-trash-o" style="font-size: 20px; margin-left: 30px; color: white"
+          onMouseOver="this.style.color='black', this.style.cursor='pointer'" onMouseOut="this.style.color='white'">
+        </i>
+      </span>
+    </span>
+  </p>
+  <% end %>
+  <% end %>
+</section>

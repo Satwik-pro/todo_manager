@@ -1,0 +1,65 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("https://previews.123rf.com/images/tirachard/tirachard1905/tirachard190500033/122186209-creative-flat-lay-photo-of-workspace-desk-top-view-office-desk-with-laptop-pencil-notebook-and-plant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 300px;
+  margin-top: 200px;
+}
+
+input {
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  height: 35px;
+  width: 200px;
+}
+
+.Checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+.Todos {
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+::placeholder {
+  font-size: 17px;
+  padding: 20px 15px;
+}
+
+button {
+  border-radius: 5px;
+  border: 2px solid rgb(10, 196, 10);
+  height: 36px;
+  width: 80px;
+  color: white;
+  background-color: rgb(10, 196, 10);
+}
+
+span {
+  font-weight: 100;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.Overdue {
+  color: red;
+}
+
+p {
+  margin-left: 20px;
+  display: flex;
+}
+
+.TextSpan:hover {
+  background-color: rgb(238, 222, 252);
+}
