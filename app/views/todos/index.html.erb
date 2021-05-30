@@ -5,35 +5,30 @@
     <meta name="viewport" content="width=device-width" />
     <title>Todo Management</title>
     <link href="todo-app.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
-
-  <body>
-    <h1>My Todo-list</h1>
-    <form action="/todos" method="POST">
-      <input type="text" placeholder="What's Next?" name="todo_text" />
-      &nbsp;
-      <input type="date" name="due_date"/>
-      &nbsp;
+<body>
+  <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
+    <nobr>
+      <%= text_field_tag("todo_text", '', placeholder: "What's Next?" )%>&nbsp;
+      <input type="date" name="due_date"/>&nbsp;
       <button type="submit" style="cursor: pointer; font-size: 15px" name="add">Add</button>
-  </form>
-      <%= render partial: "todo-section", locals: {
-        section_title: "Overdue",
-        todos: Todo.overdue,
-        show_date: true
-      } %>
-      <%= render partial: "todo-section", locals: {
-        section_title: "Due Today",
-        todos: Todo.due_today,
-        show_date: false
-      } %>
-      <%= render partial: "todo-section", locals: {
-        section_title: "Due Later",
-        todos: Todo.due_later,
-        show_date: true
-      } %>
-  </body>
-</html>
+    </nobr>
+  <% end %>
+    <h1>My Todo-List</h1>
+
+    <%= render partial: "todo-section", locals: {
+      section_title: "Overdue",
+      todos: Todo.overdue,
+      show_date: true
+    }%>
+    <%= render partial: "todo-section", locals: {
+      section_title: "Due Today",
+      todos: Todo.due_today,
+      show_date: false
+    } %>
+    <%= render partial: "todo-section", locals: {
+      section_title: "Due Later",
+      todos: Todo.due_later,
+      show_date: true
+    } %>
+</body>

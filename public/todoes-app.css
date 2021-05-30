@@ -51,15 +51,7 @@ span {
   margin-left: 15px;
 }
 
-.Overdue {
-  color: red;
-}
-
 p {
   margin-left: 20px;
   display: flex;
-}
-
-.TextSpan:hover {
-  background-color: rgb(238, 222, 252);
 }

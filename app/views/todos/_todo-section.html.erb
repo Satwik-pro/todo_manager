@@ -1,26 +1,34 @@
 <section>
-  <h2><%= section_title %>
-    <span><%= todos.completed.count %>/<%= todos.count %></span>
-  </h2>
-  <% todos.order(:due_date).each do |todo| %>
-  <% if section_title == "Overdue" && todo.completed %>
-  <% else %>
-  <p>
-    <span class="TextSpan">
-      <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-        <input class="Checkbox" name="completed" onClick="this.form.submit()" type="checkbox" <%= todo.completed ? "checked" : "" %>>
-      <span class='Todos <%= todo.completed ? "checked" : "" %>'>
-        <%= todo.todo_text %>
-        <% if show_date %>
-        <span style="color: grey"><%= todo.due_date %></span>
-        <% end %>
-        <i class="fa fa-trash-o" style="font-size: 20px; margin-left: 30px; color: white"
-          onMouseOver="this.style.color='black', this.style.cursor='pointer'" onMouseOut="this.style.color='white'">
-        </i>
-      </span>
-      <% end %>
+  <div class="When-due">
+    <h2>
+      <%= section_title %>
+    </h2>
+    <span class="completed">
+      <%= todos.completed.count %>/<%= todos.count %>
     </span>
-  </p>
-  <% end %>
-  <% end %>
+  </div>
+  <ul>
+    <% todos.order(:due_date).each do |todo| %>
+      <li>
+        <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+          <input class="Checkbox" name="completed" onClick="this.form.submit()" type="checkbox" <%= todo.completed ? "checked" : "" %>>
+        <% end %>
+
+        <label class='text-decoration-line : <%= todo.completed ? "strike" : "non-strike" %>'>
+          <%= todo.todo_text %>
+        </label>
+
+        <% if show_date %>
+          <p class="due-date">
+            <%= todo.due_date.to_s(:short) %>
+          </p>
+        <% end %>
+
+        <%= form_with(url: "/todos/#{todo.id}", method: "delete") do |f| %>
+        <input class="img" type="image" src="https://icons-for-free.com/iconfiles/png/512/delete+remove+trash+trash+bin+trash+can+icon-1320073117929397588.png"
+        onClick="this.form.submit()">
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 </section>
