@@ -10,8 +10,8 @@
   <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
     <nobr>
       <%= text_field_tag("todo_text", '', placeholder: "What's Next?" )%>&nbsp;
-      <input type="date" name="due_date"/>&nbsp;
-      <button type="submit" style="cursor: pointer; font-size: 15px" name="add">Add</button>
+      <%= date_field_tag("due_date", '')%>&nbsp;
+      <%= button_tag("Add", type: "submit")%>
     </nobr>
   <% end %>
     <h1>My Todo-List</h1>

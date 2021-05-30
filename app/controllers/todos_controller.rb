@@ -28,10 +28,8 @@ class TodosController < ApplicationController
   def update
     id = params[:id]
     completed = params[:completed]
-    # todo_text = params[:todo_text]
     todo = Todo.find(id)
     todo.completed = completed
-    # todo.todo_text = todo_text
     todo.save!
     # render plain: "Updated todo completed status to #{completed} and todo text to #{todo_text}"
     redirect_to todos_path
@@ -43,11 +41,4 @@ class TodosController < ApplicationController
     todo.destroy
     redirect_to todos_path
   end
-
-  # def del
-  #   id = params[:id]
-  #   todo = Todo.find(id)
-  #   todo.destroy
-  #   redirect_to todos_path
-  # end
 end

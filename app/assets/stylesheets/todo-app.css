@@ -11,76 +11,6 @@ body {
   margin-top: 150px;
 }
 
-.Checkbox {
-  height: 20px;
-  width: 20px;
-}
-
-h1 {
-  display: flex;
-  font-size: 25px;
-  font-weight: 600;
-}
-
-h2 {
-  display: flex;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 7px;
-}
-
-.completed {
-  font-size: 15px;
-}
-
-.When-due {
-  display: flex;
-  align-items: center;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  margin: 10px;
-}
-
-li:hover {
-  background-color: #dccdf1;
-}
-
-.due-date {
-  font-size: 10px;
-  margin-right: 5px;
-}
-
-.img {
-  height: 20px;
-  width: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-  visibility: hidden;
-}
-
-li:hover input[type="image"] {
-  visibility: visible;
-}
-
-.strike {
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  margin: 10px;
-  text-decoration: line-through;
-}
-
-.non-strike {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  margin: 10px;
-}
-
 input {
   border-radius: 5px;
   border: 2px solid rgb(206, 204, 204);
@@ -99,10 +29,82 @@ button {
   height: 36px;
   width: 80px;
   color: white;
+  cursor: pointer;
+  font-size: 15px;
   background-color: rgb(10, 196, 10);
 }
 
 p {
   margin-left: 20px;
   display: flex;
+}
+
+h1 {
+  display: flex;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+h2 {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 7px;
+}
+
+.When-due {
+  display: flex;
+  align-items: center;
+}
+
+.completed {
+  font-size: 15px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin: 10px;
+}
+
+li:hover {
+  background-color: #dccdf1;
+}
+
+.Checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+.due-date {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.strike {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin: 10px;
+  text-decoration: line-through;
+}
+
+.non-strike {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.img {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+li:hover input[type="image"] {
+  visibility: visible;
 }
