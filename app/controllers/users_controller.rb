@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
   def index
     render plain: User.order(:id).map { |user| user.to_displayable_string }.join("\n")
@@ -40,8 +40,8 @@ class UsersController < ApplicationController
   def login
     email = params[:email]
     password = params[:password]
-    user = User.where("email = ? and password = ?", email, password)
-    response = user.empty?
+    users = User.where("email = ? and password_digest = ?", email, password)
+    response = !users.empty?
     render plain: response
   end
 end
