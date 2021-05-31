@@ -20,7 +20,8 @@ class UsersController < ApplicationController
     # email = params[:email]
     # password = params[:password]
     # new_user = User.create!(
-    #   name: name,
+    #   first_name: first_name,
+    #   last_name: last_name
     #   email: email,
     #   password: password,
     # )
