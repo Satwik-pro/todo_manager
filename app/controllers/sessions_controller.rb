@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to todos_path
     else
+      flash[:error] = "Invalid E-Mail ID or Password"
       redirect_to new_sessions_path
     end
   end
