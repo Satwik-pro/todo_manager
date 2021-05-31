@@ -6,52 +6,36 @@
     <meta name="viewport" content="width=device-width" />
     <title>Todo Management</title>
     <link href="todoes-app.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
 
   <body>
     <h1>My Todo-list</h1>
     <input type="text" placeholder="What's Next?" />
     &nbsp;
-    <input type="date" />
+    <input type="date"/>
     &nbsp;
     <button type="submit" style="cursor: pointer; font-size: 15px">Add</button>
     <article>
       <section>
         <h2>Due Today <span>0/4</span></h2>
         <p>
-          <span class="TextSpan">
-            <input class="Checkbox" type="checkbox" />
-            <span class="Todos"
+          <span class="TodoSection-Todo">
+            <input class="TodoSection-TodoCheckbox" type="checkbox" />
+            <span class="TodoSection-TodoText"
               >Submit SaaS 201 Project
-              <span class="Overdue"
+              <span class="TodoSection-Overdue"
                 >Overdue
-                <i
-                  class="fa fa-trash-o"
-                  style="font-size: 20px; margin-left: 30px; color: white"
-                  onMouseOver="this.style.color='black', this.style.cursor='pointer'"
-                  onMouseOut="this.style.color='white'"
-                >
-                </i>
+                <img id="TodoSection-Icon" class="TodoSection-Image" src="../app/assets/images/trash.png">
               </span>
             </span>
           </span>
         </p>
         <p>
-          <span class="TextSpan">
-            <input class="Checkbox" type="checkbox" />
-            <span class="Todos"
+          <span class="TodoSection-Todo">
+            <input class="TodoSection-TodoCheckbox" type="checkbox" />
+            <span class="TodoSection-TodoText"
               >Call Accountant
-              <i
-                class="fa fa-trash-o"
-                style="font-size: 20px; margin-left: 30px; color: white"
-                onMouseOver="this.style.color='black', this.style.cursor='pointer'"
-                onMouseOut="this.style.color='white'"
-              >
-              </i>
+              <img class="TodoSection-Image" src="../app/assets/images/trash.png">
             </span>
           </span>
         </p>
@@ -59,17 +43,11 @@
       <section>
         <h2>Due Tomorrow <span>0/3</span></h2>
         <p>
-          <span class="TextSpan">
-            <input class="Checkbox" type="checkbox" />
-            <span class="Todos"
+          <span class="TodoSection-Todo">
+            <input class="TodoSection-TodoCheckbox" type="checkbox" />
+            <span class="TodoSection-TodoText"
               >Refill Groceries
-              <i
-                class="fa fa-trash-o"
-                style="font-size: 20px; margin-left: 30px; color: white"
-                onMouseOver="this.style.color='black', this.style.cursor='pointer'"
-                onMouseOut="this.style.color='white'"
-              >
-              </i>
+              <img class="TodoSection-Image" src="../app/assets/images/trash.png">
             </span>
           </span>
         </p>
@@ -77,47 +55,29 @@
       <section>
         <h2>Remaining <span>0/3</span></h2>
         <p>
-          <span class="TextSpan">
-            <input class="Checkbox" type="checkbox" />
-            <span class="Todos"
+          <span class="TodoSection-Todo">
+            <input class="TodoSection-TodoCheckbox" type="checkbox" />
+            <span class="TodoSection-TodoText"
               >Type Something
-              <i
-                class="fa fa-trash-o"
-                style="font-size: 20px; margin-left: 30px; color: white"
-                onMouseOver="this.style.color='black', this.style.cursor='pointer'"
-                onMouseOut="this.style.color='white'"
-              >
-              </i>
+              <img class="TodoSection-Image" src="../app/assets/images/trash.png">
             </span>
           </span>
         </p>
         <p>
-          <span class="TextSpan">
-            <input class="Checkbox" type="checkbox" />
-            <span class="Todos"
-              >Type Something
-              <i
-                class="fa fa-trash-o"
-                style="font-size: 20px; margin-left: 30px; color: white"
-                onMouseOver="this.style.color='black', this.style.cursor='pointer'"
-                onMouseOut="this.style.color='white'"
-              >
-              </i>
+          <span class="TodoSection-Todo">
+            <input class="TodoSection-TodoCheckbox" type="checkbox" />
+            <span class="TodoSection-TodoText">
+              Type Something
+              <img class="TodoSection-Image" src="../app/assets/images/trash.png">
             </span>
           </span>
         </p>
         <p>
-          <span class="TextSpan">
-            <input class="Checkbox" type="checkbox" />
-            <span class="Todos"
+          <span class="TodoSection-Todo">
+            <input class="TodoSection-TodoCheckbox" type="checkbox" />
+            <span class="TodoSection-TodoText"
               >Type Something
-              <i
-                class="fa fa-trash-o"
-                style="font-size: 20px; margin-left: 30px; color: white"
-                onMouseOver="this.style.color='black', this.style.cursor='pointer'"
-                onMouseOut="this.style.color='white'"
-              >
-              </i>
+              <img class="TodoSection-Image" src="../app/assets/images/trash.png">
             </span>
           </span>
         </p>

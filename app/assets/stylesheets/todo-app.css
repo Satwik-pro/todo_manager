@@ -34,7 +34,7 @@ button {
   background-color: rgb(10, 196, 10);
 }
 
-p {
+.due_date {
   margin-left: 20px;
   display: flex;
 }

@@ -1,1 +1,13 @@
-<h1>This is the Home Page</h1>
+<h1 id="Home-heading">Welcome to Todo Manager</h1>
+
+<br>
+<p id="Home-p">
+  If you are a new user,
+  <%= link_to "Sign Up here", new_user_path %>
+</p>
+
+<br>
+<p id="Home-p">
+  If you are an existing user,
+  <%= link_to "Sign In here", new_sessions_path %>
+</p>

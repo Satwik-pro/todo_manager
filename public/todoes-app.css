@@ -17,16 +17,6 @@ input {
   width: 200px;
 }
 
-.Checkbox {
-  height: 20px;
-  width: 20px;
-}
-
-.Todos {
-  font-size: 22px;
-  margin-left: 10px;
-}
-
 h1 {
   font-weight: bold;
 }
@@ -56,6 +46,38 @@ p {
   display: flex;
 }
 
-.TextSpan:hover {
-  background-color: chartreuse;
+.TodoSection-Todo:hover {
+  background-color: rgb(233, 202, 233);
+}
+
+.TodoSection-TodoCheckbox {
+  height: 20px;
+  width: 20px;
+}
+
+.TodoSection-TodoText {
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.TodoSection-Overdue {
+  color: red;
+}
+
+.TodoSection-Image {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  visibility: visible;
+}
+
+/* Sir, Hover property not working to make the trash icons visible so I made it visible in above class only !! */
+
+.TodoSection-Image:hover {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  visibility: visible;
 }
