@@ -1,4 +1,8 @@
 class Todo < ActiveRecord::Base
+  belongs_to :user
+  # table users
+  # column user_id
+
   def to_displayable_string
     is_completed = completed ? "[X]" : "[ ]"
     "#{id}. #{is_completed} #{todo_text} #{due_date}"

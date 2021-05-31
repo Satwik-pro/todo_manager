@@ -68,7 +68,12 @@ li {
   margin: 10px;
 }
 
-li:hover {
+.TodoSpan {
+  display: flex;
+  align-items: center;
+}
+
+.TodoSpan:hover {
   background-color: #dccdf1;
 }
 

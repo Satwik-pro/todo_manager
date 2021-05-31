@@ -55,3 +55,7 @@ p {
   margin-left: 20px;
   display: flex;
 }
+
+.TextSpan:hover {
+  background-color: chartreuse;
+}
