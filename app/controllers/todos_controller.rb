@@ -3,12 +3,13 @@ class TodosController < ApplicationController
 
   def index
     # render plain: Todo.order(:id).map { |todo| todo.to_displayable_string }.join("\n")
+    @todos = Todo.of_user(current_user)
     render "index"
   end
 
   def show
     id = params[:id]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     render plain: todo.to_displayable_string
   end
 
@@ -19,6 +20,7 @@ class TodosController < ApplicationController
       todo_text: todo_text,
       due_date: due_date,
       completed: false,
+      user_id: current_user.id,
     )
     # response_text = "New Todo created with ID: #{new_todo.id}"
     # render plain: response_text
@@ -28,7 +30,7 @@ class TodosController < ApplicationController
   def update
     id = params[:id]
     completed = params[:completed]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     todo.completed = completed
     todo.save!
     # render plain: "Updated todo completed status to #{completed} and todo text to #{todo_text}"
@@ -37,7 +39,7 @@ class TodosController < ApplicationController
 
   def destroy
     id = params[:id]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     todo.destroy
     redirect_to todos_path
   end

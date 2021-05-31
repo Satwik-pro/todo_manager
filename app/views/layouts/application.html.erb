@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <% if @current_user %>
+      <p>
+        <%= @current_user.first_name %>
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        <%= link_to "Sign Out", destroy_session_path, method: "delete" %>
+      </p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
