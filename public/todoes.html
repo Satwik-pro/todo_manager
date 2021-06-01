@@ -10,15 +10,17 @@
 
   <body>
     <h1>My Todo-list</h1>
-    <input type="text" placeholder="What's Next?" />
-    &nbsp;
-    <input type="date" />
-    &nbsp;
-    <button type="submit" style="cursor: pointer; font-size: 15px">Add</button>
+    <section class="AddTodo-Input">
+      <input type="text" placeholder="What's Next?" />
+      &nbsp;
+      <input type="date" />
+      &nbsp;
+      <button type="submit" style="cursor: pointer; font-size: 15px">Add</button>
+    </section>
     <article>
       <section>
         <h2>Due Today <span>0/4</span></h2>
-        <p>
+        <div>
           <span class="TodoSection-Todo">
             <input class="TodoSection-TodoCheckbox" type="checkbox" />
             <span class="TodoSection-TodoText"
@@ -28,78 +30,78 @@
                 <img
                   id="TodoSection-Icon"
                   class="TodoSection-Image"
-                  src="../app/assets/images/trash.png"
+                  src="trash.png"
                 />
               </span>
             </span>
           </span>
-        </p>
-        <p>
+        </div>
+        <div>
           <span class="TodoSection-Todo">
             <input class="TodoSection-TodoCheckbox" type="checkbox" />
             <span class="TodoSection-TodoText"
               >Call Accountant
               <img
                 class="TodoSection-Image"
-                src="../app/assets/images/trash.png"
+                src="trash.png"
               />
             </span>
           </span>
-        </p>
+        </div>
       </section>
       <section>
         <h2>Due Tomorrow <span>0/3</span></h2>
-        <p>
+        <div>
           <span class="TodoSection-Todo">
             <input class="TodoSection-TodoCheckbox" type="checkbox" />
             <span class="TodoSection-TodoText"
               >Refill Groceries
               <img
                 class="TodoSection-Image"
-                src="../app/assets/images/trash.png"
+                src="trash.png"
               />
             </span>
           </span>
-        </p>
+        </div>
       </section>
       <section>
         <h2>Remaining <span>0/3</span></h2>
-        <p>
+        <div>
           <span class="TodoSection-Todo">
             <input class="TodoSection-TodoCheckbox" type="checkbox" />
             <span class="TodoSection-TodoText"
               >Type Something
               <img
                 class="TodoSection-Image"
-                src="../app/assets/images/trash.png"
+                src="trash.png"
               />
             </span>
           </span>
-        </p>
-        <p>
+        </div>
+        <div>
           <span class="TodoSection-Todo">
             <input class="TodoSection-TodoCheckbox" type="checkbox" />
             <span class="TodoSection-TodoText">
               Type Something
               <img
                 class="TodoSection-Image"
-                src="../app/assets/images/trash.png"
+                src="trash.png"
               />
             </span>
           </span>
-        </p>
-        <p>
+        </div>
+        <div>
           <span class="TodoSection-Todo">
             <input class="TodoSection-TodoCheckbox" type="checkbox" />
             <span class="TodoSection-TodoText"
               >Type Something
               <img
                 class="TodoSection-Image"
-                src="../app/assets/images/trash.png"
+                src="trash.png"
               />
             </span>
           </span>
-        </p>
+        </div>
       </section>
     </article>
   </body>

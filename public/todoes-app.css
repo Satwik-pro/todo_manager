@@ -6,19 +6,21 @@ body {
   background-image: url("https://previews.123rf.com/images/tirachard/tirachard1905/tirachard190500033/122186209-creative-flat-lay-photo-of-workspace-desk-top-view-office-desk-with-laptop-pencil-notebook-and-plant.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: 300px;
-  margin-top: 200px;
+  margin-left: 150px;
+  margin-top: 150px;
 }
 
-input {
+.AddTodo-Input input {
   border-radius: 5px;
-  border: 2px solid #ccc;
   height: 35px;
   width: 200px;
+  display: inline-flex;
+  border: 2px solid #ccc;
 }
 
 h1 {
   font-weight: bold;
+  display: flex;
 }
 
 ::placeholder {
@@ -26,12 +28,12 @@ h1 {
   padding: 20px 15px;
 }
 
-button {
+.AddTodo-Input button {
   border-radius: 5px;
   border: 2px solid rgb(10, 196, 10);
-  height: 36px;
-  width: 80px;
   color: white;
+  height: 35px;
+  width: 80px;
   background-color: rgb(10, 196, 10);
 }
 
@@ -39,10 +41,15 @@ span {
   font-weight: 100;
   font-size: 20px;
   margin-left: 15px;
+  display: inline-flex;
 }
 
-p {
+div {
   margin-left: 20px;
+  display: flex;
+}
+
+.TodoSection-Todo {
   display: flex;
 }
 
@@ -65,16 +72,6 @@ p {
 }
 
 .TodoSection-Image {
-  height: 20px;
-  width: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-  visibility: visible;
-}
-
-/* Sir, Hover property not working to make the trash icons visible so I made it visible in above class only !! */
-
-.TodoSection-Image:hover {
   height: 20px;
   width: 20px;
   margin-left: 10px;
