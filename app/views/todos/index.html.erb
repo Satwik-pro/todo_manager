@@ -6,29 +6,21 @@
     <title>Todo Management</title>
     <link href="todo-app.css" rel="stylesheet" type="text/css" />
   </head>
-<body>
-  <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
+  <body>
+    <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
     <nobr>
       <%= text_field_tag("todo_text", '', placeholder: "What's Next?" )%>&nbsp;
-      <%= date_field_tag("due_date", '')%>&nbsp;
-      <%= button_tag("Add", type: "submit")%>
+      <%= date_field_tag("due_date", '')%>&nbsp; <%= button_tag("Add", type:
+      "submit")%>
     </nobr>
-  <% end %>
+    <% end %>
     <h1>My Todo-List</h1>
 
-    <%= render partial: "todo-section", locals: {
-      section_title: "Overdue",
-      todos: @todos.overdue,
-      show_date: true
-    }%>
-    <%= render partial: "todo-section", locals: {
-      section_title: "Due Today",
-      todos: @todos.due_today,
-      show_date: false
-    } %>
-    <%= render partial: "todo-section", locals: {
-      section_title: "Due Later",
-      todos: @todos.due_later,
-      show_date: true
-    } %>
-</body>
+    <%= render partial: "todo-section", locals: { section_title: "Overdue",
+    todos: @todos.overdue, show_date: true }%> <%= render partial:
+    "todo-section", locals: { section_title: "Due Today", todos:
+    @todos.due_today, show_date: false } %> <%= render partial: "todo-section",
+    locals: { section_title: "Due Later", todos: @todos.due_later, show_date:
+    true } %>
+  </body>
+</html>

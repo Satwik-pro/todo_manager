@@ -4,8 +4,6 @@ class Todo < ActiveRecord::Base
   validates :todo_text, length: { minimum: 2 }
 
   belongs_to :user
-  # table users
-  # column user_id
 
   def to_displayable_string
     is_completed = completed ? "[X]" : "[ ]"
