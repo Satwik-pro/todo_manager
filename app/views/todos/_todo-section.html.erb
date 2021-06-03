@@ -1,6 +1,8 @@
 <section>
   <div class="When-due">
-    <h2><%= section_title %></h2>
+    <h2>
+      <%= section_title %>
+    </h2>
     <span class="completed">
       <%= todos.completed.count %>/<%= todos.count %>
     </span>
@@ -8,31 +10,29 @@
   <ul>
     <% todos.order(:due_date).each do |todo| %>
     <li>
-      <span class="TodoSpan">
-        <%= form_with(url: "/todos/#{todo.id}", method: "put") do %> <%=
-        check_box_tag :completed, "completed", todo.completed ? true : false,
-        onclick: "this.form.submit()", class: "Checkbox" %> <% end %>
-        <label
-          class="
-            text-decoration-line
-            :
-            <%=
-            todo.completed
-            ?
-            &quot;strike&quot;
-            :
-            &quot;non-strike&quot;
-            %>
-          "
-        >
+      <div class="TodoSpan">
+        <%= form_with(url: "/todos/#{todo.id}", method: !todo.completed && section_title == "Overdue" ? "delete" : "put") do %>
+          <%= check_box_tag :completed, "completed",
+                            todo.completed ? true : false,
+                            onclick: "this.form.submit()",
+                            class: "Checkbox"
+          %>
+        <% end %>
+        <label class=<%= todo.completed ? "strike" : "non-strike" %>>
           <%= todo.todo_text %>
         </label>
         <% if show_date %>
-        <p class="due-date"><%= todo.due_date.to_s(:short) %></p>
-        <% end %> <%= form_with(url: "/todos/#{todo.id}", method: "delete") do
-        %> <%= image_submit_tag("trash.png", onclick: "this.form.submit()",
-        class: "img") %> <% end %>
-      </span>
+        <p class="due-date">
+          <%= todo.due_date.to_s(:short) %>
+        </p>
+      <% end %>
+      <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+        <%= image_submit_tag("trash.png",
+                             onclick: "this.form.submit()",
+                             class: "img")
+        %>
+      <% end %>
+      </div>
     </li>
     <% end %>
   </ul>
