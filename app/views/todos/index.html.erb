@@ -16,7 +16,8 @@
     </h1>
       <%= render partial: "todo-section",
                  locals: { section_title: "Overdue",
-                 todos: @todos.overdue, show_date: true }
+                 todos: @todos.overdue,
+                 show_date: true }
       %>
       <%= render partial: "todo-section",
                  locals: { section_title: "Due Today",

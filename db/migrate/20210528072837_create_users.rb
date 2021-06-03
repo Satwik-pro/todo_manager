@@ -10,7 +10,3 @@ class CreateUsers < ActiveRecord::Migration[6.1]
     end
   end
 end
-
-# rails console
-# ActiveRecord::Migration.remove_column :users, :name
-# ActiveRecord::Migration.add_column :users, :first_name, :string
