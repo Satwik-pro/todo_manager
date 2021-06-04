@@ -1,32 +1,35 @@
 <section class="Form-section">
-  <h2>Welcome New User! Sign Up Here!</h2>
+  <h2>
+    Welcome New User! Sign Up Here!
+  </h2>
   <%= form_with url: users_path do |form| %>
-  <div class="Form-field">
-    <label>
-      First Name
-    </label>
-    <%= form.text_field :first_name %>
-  </div>
+    <div class="Form-field">
+      <label>
+        First Name
+      </label>
+      <%= form.text_field :first_name %>
+    </div>
 
-  <div class="Form-field">
-    <label>
-      Last Name
-    </label>
-    <%= form.text_field :last_name %>
-  </div>
+    <div class="Form-field">
+      <label>
+        Last Name
+      </label>
+      <%= form.text_field :last_name %>
+    </div>
 
-  <div class="Form-field">
-    <label>
-      Email
-    </label>
-    <%= form.email_field :email %>
-  </div>
+    <div class="Form-field">
+      <label>
+        Email
+      </label>
+      <%= form.email_field :email %>
+    </div>
 
-  <div class="Form-field">
-    <label>
-      Password
-    </label>
-    <%= form.password_field :password %>
-  </div>
-  <%= form.submit "Sign-up", class: "Form-submit" %> <% end %>
+    <div class="Form-field">
+      <label>
+        Password
+      </label>
+      <%= form.password_field :password %>
+    </div>
+    <%= form.submit "Sign-up", class: "Form-submit" %>
+  <% end %>
 </section>
