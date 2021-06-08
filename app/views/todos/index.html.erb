@@ -4,7 +4,10 @@
                 class: "AddTodo") do
   %>
     <nobr>
-      <%= text_field_tag("todo_text", '', placeholder: "What's Next?") %>
+      <%= text_field_tag("todo_text", '',
+                          placeholder: "What's Next?",
+                          :autofocus => true)
+      %>
       &nbsp;
       <%= date_field_tag("due_date", '') %>
       &nbsp;

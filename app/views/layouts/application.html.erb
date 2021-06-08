@@ -12,13 +12,16 @@
 
   <body>
     <% if @current_user %>
-      <p>
-        <%= @current_user.first_name %>
-        &emsp;&emsp;&emsp;&emsp;&emsp;
-        <%= link_to "Sign Out", destroy_session_path, method: "delete" %>
+      <p style="font-size: 20px;">
+        Hi! <%= @current_user.first_name %>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <%= link_to "Sign Out", destroy_session_path, method: "delete", :id => 'Sign-Out' %>
       </p>
     <% end %>
-    <%= flash[:error] %>
+    <div id="Error">
+      <%= flash[:error] %>
+    </div>
     <%= yield %>
   </body>
 </html>

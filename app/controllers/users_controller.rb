@@ -24,7 +24,9 @@ class UsersController < ApplicationController
     )
 
     if new_user.save
-      redirect_to "/"
+      user = User.find_by(email: params[:email])
+      session[:current_user_id] = user.id
+      redirect_to todos_path
     else
       flash[:error] = new_user.errors.full_messages.join(", ")
       redirect_to "/users/new"

@@ -113,3 +113,21 @@ li {
 li:hover input[type="image"] {
   visibility: visible;
 }
+
+#Sign-Out {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+}
+
+#Sign-Out:hover {
+  background-color: rgb(240, 185, 185);
+  color: black;
+}
+
+#Error {
+  color: red;
+  padding: 10px 0px 10px 0px;
+  width: 600px;
+}
